@@ -11,4 +11,4 @@ A user should be able to:
 - [ ] Navigate to the home page (`/`)
 - [ ] See all placeholder data from mockup
 
-For more information on accessing the design assets, see the [Design Assets section in the README](https://github.com/OpenClassrooms-Student-Center/ArgentBank-website#design-assets).
+For more information on accessing the design assets, see the [Design Assets section in the README](https://github.com/Recruiter2/ArgentBank-website#design-assets).
