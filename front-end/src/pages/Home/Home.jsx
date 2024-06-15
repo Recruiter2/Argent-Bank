@@ -7,7 +7,7 @@ import bankTree from '../../assets/bank-tree.jpeg'
 export function Home() {
     return (
         <main>
-             <Banner src={seasideCliffs} alt="Bord de mer" content="Chez vous,partout et ailleurs" />
+             <Banner src={bankTree} alt="Bord de mer" content="Bank tree funny how money tree grows instead of money being devalued" />
 
         </main>
     )
