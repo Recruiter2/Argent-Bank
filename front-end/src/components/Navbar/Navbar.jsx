@@ -4,16 +4,16 @@ import './navbar.css';
 
 function Nav() {
   return (
-    <nav className='navbar'>
-      <img src={logo} alt="Logo Argent Bank" />
-      <ul>
-        <li>
-          <NavLink to="/" activeclassname="active">Accueil</NavLink>
-        </li>
-        <li>
+    <nav className='main-nav'>
+      
+      
+          <NavLink to="/" activeclassname="active" className={'main-nav-logo'}>
+            <img src={logo} alt="Logo Argent Bank" />
+            <h1 className='sr-only'>Argent Bank</h1>
+          </NavLink>
+  
           <NavLink to="/sign-in" activeclassname="active" className='aboutlink'>Sign in</NavLink>
-        </li>
-      </ul>
+   
     </nav>
   );
 };
