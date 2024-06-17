@@ -4,7 +4,7 @@ import './navbar.css';
 
 function Nav() {
   return (
-    <nav className='header'>
+    <nav className='navbar'>
       <img src={logo} alt="Logo Argent Bank" />
       <ul>
         <li>
