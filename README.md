@@ -37,8 +37,8 @@ npm run dev:server
 # Populate database with two users
 npm run populate-db
 
-# Launch  front obviously navigate to folder first
-npm start
+# Launch  front obviously navigate to folder first, btw steps above might be unecessary
+npm run dev
 
 
 
