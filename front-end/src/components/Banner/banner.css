@@ -5,6 +5,8 @@
     background-repeat: no-repeat;
     height: 300px;
     position: relative;
+    /* Add the alt attribute */
+    content: attr(Bank tree);
   }
   
   .hero-content {
