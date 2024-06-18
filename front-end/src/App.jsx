@@ -5,7 +5,7 @@ import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import User from './pages/User/User'
-import SignIn from './pages/SignIn/SignIn'
+import Login from './pages/Login/Login'
 
 
 import './App.css'
@@ -16,7 +16,7 @@ function App() {
         <Navbar />
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/sign-in" element={<SignIn />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/user" element={<User />} />
             <Route path="*" element={<ErrorPage />} />
 

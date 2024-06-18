@@ -15,7 +15,7 @@ function Nav() {
             <h1 className='sr-only'>Argent Bank</h1>
           </NavLink>
           <div>
-            <NavLink to="/sign-in" className='main-nav-item'>
+            <NavLink to="/login" className='main-nav-item'>
             <FontAwesomeIcon icon={faCircleUser } /> {' ' /* added space here*/} 
              Sign in</NavLink>
           </div>
