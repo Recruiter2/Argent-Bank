@@ -2,10 +2,10 @@ import React from "react";
 import "./banner.css";
 
 
-function Banner({ src, alt, content="" }) {
+function Banner({ content="" }) {
     return (
-      <header className='banner'>
-        <img src={src} alt={alt}  />
+      <header className='hero'>
+        
         <p className="sr-only">{content}</p>
       </header>
     );
