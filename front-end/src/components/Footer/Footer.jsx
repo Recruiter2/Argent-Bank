@@ -2,7 +2,7 @@ import './footer.css';
 
 function Footer() {
   return (
-    <footer>
+    <footer className='footer'>
       <p> Copyright 2024 Argent Bank</p>
     </footer>
   );
