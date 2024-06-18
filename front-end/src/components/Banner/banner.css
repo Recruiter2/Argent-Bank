@@ -4,9 +4,14 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 300px;
-    position: relative;
+    /*position: relative;*/
+    z-index: 1;
     /* Add the alt attribute */
-    content: attr(Bank tree);
+    &::after {
+      position: relative;
+      content: " Bank tree";
+      z-index: -1;
+    }
   }
   
   .hero-content {
