@@ -2,11 +2,11 @@ import './login.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
 
-function Login() {
+export function Login() {
   return (
     <main className='main bg-dark'>
                
-        <section class="sign-in-content">
+        <section className="sign-in-content">
             <FontAwesomeIcon icon={faCircleUser } /> {' ' /* added space here*/} 
 
                <h1>Sign in</h1>
@@ -17,12 +17,11 @@ function Login() {
                   <div className='input-wrapper'><label for="password">Password</label
                   ><input type="password" id="password" /></div>
                   
-                  <div class="input-remember">
-            <input type="checkbox" id="remember-me" /><label for="remember-me"
-              >Remember me</label
-            >
+                  <div className="input-remember">
+                  <input type="checkbox" id="remember-me" /><label for="remember-me"
+                  >Remember me </label>
           </div>
-                  <button class="sign-in-button">Sign In</button>
+                  <button className="sign-in-button">Sign In</button>
                 </form>
   
                </section>

@@ -10,8 +10,8 @@ export function Home() {
     return (
         <main>
              <Banner content="Bank tree funny how money tree grows instead of money being devalued" />
-             <section class="features">
-             <h2 class="sr-only">Features</h2>
+             <section className="features">
+             <h2 className="sr-only">Features</h2>
              <ComItem src={chatIcon} alt="Chat Icon" title="You are our #1 priority" content="Need to talk to a representative? You can get in touch through our
             24/7 chat or through a phone call in less than 5 minutes."></ComItem>
             <ComItem src={moneyIcon} alt="Money Icon" title="More savings means higher rates" content="The more you save with us, the higher your interest rate will be! "></ComItem>
