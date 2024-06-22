@@ -38,7 +38,7 @@ npm run dev:server
 npm run populate-db
 
 # Launch  front obviously navigate to folder first, btw steps above might be unecessary
-npm run dev
+npm run dev:server
 
 
 
