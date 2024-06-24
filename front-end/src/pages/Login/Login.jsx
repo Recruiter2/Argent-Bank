@@ -1,31 +1,67 @@
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { logIn } from '../../../redux/auth.action.jsx';
+import { useNavigate } from 'react-router-dom';
 import './login.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
 
-export function Login() {
+const Login = () => {
+  const dispatch = useDispatch();
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [rememberMe, setRememberMe] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const loginError = useSelector(state => state.auth.error);
+
+  const handlelogIn = async (e) => {
+    e.preventDefault();
+
+    if (!email || !password) {
+      alert('Please enter email and password');
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      await dispatch(logIn({ email, password, rememberMe }));
+
+      Navigate('/user');
+    } catch (error) {
+      setIsLoading(false);
+    }
+  };
+
+
   return (
     <main className='main bg-dark'>
-               
-        <section className="sign-in-content">
-            <FontAwesomeIcon icon={faCircleUser } /> {' ' /* added space here*/} 
 
-               <h1>Sign in</h1>
-                <form>
-                  <div className='input-wrapper'><label htmlFor="username">Username</label
-                  ><input type="text" id="username" /></div>
+      <section className="sign-in-content">
+        <FontAwesomeIcon icon={faCircleUser} /> {' ' /* added space here*/}
 
-                  <div className='input-wrapper'><label htmlFor="password">Password</label
-                  ><input type="password" id="password" /></div>
-                  
-                  <div className="input-remember">
-                  <input type="checkbox" id="remember-me" /><label htmlFor="remember-me"
-                  >Remember me </label>
+        <h1>Sign in</h1>
+        {loginError && <p>{loginError}</p>}
+        <form onSubmit={handlelogIn}>
+          <div className='input-wrapper'><label htmlFor="username">Username</label>
+            <input type="text" id="username" autoComplete='username' value={email} onChange={(e) => setEmail(e.target.value)} />
           </div>
-                  <button className="sign-in-button">Sign In</button>
-                </form>
-  
-               </section>
-          </main>
+
+          <div className='input-wrapper'><label htmlFor="password">Password</label>
+            <input type="password" id="password" autoComplete='current-password' value={password} onChange={(e) => setPassword(e.target.value)}/>
+          </div>
+
+          <div className="input-remember">
+            <input type="checkbox" id="remember-me" checked={rememberMe} onChange={(e) => setRememberMe(e.target.checked)}/><label htmlFor="remember-me">
+              Remember me </label>
+          </div>
+          <button className="sign-in-button">Sign In</button>
+        </form>
+
+      </section>
+    </main>
   );
 };
 
