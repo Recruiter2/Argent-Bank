@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 const BASE_URL = 'http://localhost:3001/api/v1/user/';
 const LOG_IN_URL = BASE_URL + 'login';
-const PROFILE_URL = BASE_URL + 'profile';
+const PROFILE_URL = BASE_URL + 'user';
 
 export const logIn = createAsyncThunk(
   'auth/logIn',
