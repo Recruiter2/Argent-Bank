@@ -57,7 +57,7 @@ const Login = () => {
             <input type="checkbox" id="remember-me" checked={rememberMe} onChange={(e) => setRememberMe(e.target.checked)}/><label htmlFor="remember-me">
               Remember me </label>
           </div>
-          <button className="sign-in-button">Sign In</button>
+          <button type="submit" className="sign-in-button" disabled={isLoading}> {isLoading? 'Connecting ...' : 'Sign in'}</button>
         </form>
 
       </section>
