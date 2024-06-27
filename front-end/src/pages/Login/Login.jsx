@@ -8,6 +8,7 @@ import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
 
 const Login = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -24,12 +25,13 @@ const Login = () => {
       return;
     }
 
-    setIsLoading(true);
+    setIsLoading(true); //what is this?
 
     try {
       await dispatch(logIn({ email, password, rememberMe }));
+        console.log('User logged in successfully');
+      navigate('/user');
 
-      Navigate('/user');
     } catch (error) {
       setIsLoading(false);
     }
