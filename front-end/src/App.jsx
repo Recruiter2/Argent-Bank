@@ -5,7 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
-import User from './pages/User/User'
+import User from './pages/User/Profile'
 import Login from './pages/Login/Login'
 
 
@@ -22,7 +22,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route 
-            path="/user"
+            path="/profile"
              element={isConnected ? <User /> : <Navigate to="/login"/>} />
             <Route path="*" element={<ErrorPage />} />
 

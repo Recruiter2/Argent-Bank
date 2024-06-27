@@ -29,8 +29,7 @@ const Login = () => {
 
     try {
       await dispatch(logIn({ email, password, rememberMe }));
-        console.log('User logged in successfully');
-      navigate('/user');
+      navigate('/profile');
 
     } catch (error) {
       setIsLoading(false);
