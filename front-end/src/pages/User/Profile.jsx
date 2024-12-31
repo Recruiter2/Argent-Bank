@@ -6,7 +6,8 @@ import { getProfile, editUserName } from '../../../redux/auth.action';
 const User = () => {
   
     const dispatch = useDispatch();
-    const userProfile = useSelector(state => state.auth.user);
+    const userProfile = useSelector(state => state.auth.user); //Select "user" in reducer
+    const [editing, setEditing] = useState(false); // pour gerer l'etat dans le composant seulement here we work on the edit username
 
     useEffect(() => {
       dispatch(getProfile());
@@ -50,7 +51,7 @@ const User = () => {
     return (
     <main className="main bg-dark">
       <div className="header">
-        <h1>Welcome back<br />Tony Jarvis!</h1>
+        <h1>Welcome back <br /> {userProfile.firstName} {userProfile.lastName} ! </h1>
         <button className="edit-button">Edit Name</button>
       </div>
       <h2 className="sr-only">Accounts</h2>
