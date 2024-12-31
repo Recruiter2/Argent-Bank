@@ -14,6 +14,7 @@ function Nav() {
             <img src={logo} alt="Logo Argent Bank" className="main-nav-logo-image"/>
             <h1 className='sr-only'>Argent Bank</h1>
           </NavLink>
+          
           <div>
             <NavLink to="/login" className='main-nav-item'>
             <FontAwesomeIcon icon={faCircleUser } /> {' ' /* added space here*/} 
