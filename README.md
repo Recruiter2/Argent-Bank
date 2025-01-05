@@ -34,10 +34,11 @@ npm install
 # Start local dev server
 npm run dev:server
 
-# Populate database with two users
+# Populate database with two users. Warning! looks like the 2 has been inverted first run this then instruction above or open new terminal...
 npm run populate-db
 
 # Launch  front obviously navigate to folder first, btw steps above might be unecessary
+cd front-end/
 npm run dev
 
 
