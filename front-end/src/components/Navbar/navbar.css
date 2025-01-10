@@ -1,4 +1,4 @@
-.main-nav {
+  .main-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,3 +37,14 @@
     width: 1em;
     height: 1em;
   }
+
+  .nav-list {
+    display: flex;
+
+    .nav-item {
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+        color: #2c3e50;
+    }
+}
