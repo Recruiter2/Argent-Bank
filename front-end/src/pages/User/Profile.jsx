@@ -29,6 +29,11 @@ const User = () => {
             setInitialUserName('');
         }
     }, [userProfile]);
+
+    const edit = (e) => {
+      e.preventDefault();
+      setEditing(!editing); // Mettre à jour l'état pour afficher le formulaire
+    };
     
     const toggleEdit = () => {
         setupdateUsername(!updateUsername);
