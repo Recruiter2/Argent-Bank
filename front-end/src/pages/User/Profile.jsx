@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './user.css';
+import accountData from '../../data/accountdata.json';
 import Account_n  from '../../components/Account_n/Account_n';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProfile, editUserName } from '../../../redux/auth.action';
