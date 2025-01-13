@@ -53,9 +53,9 @@ const User = () => {
 
     };
 
-    const handleCancel = () => {
+    const handleCancel = (e) => {
         setNewUserName(initialUserName);
-        toggleEdit();
+        edit(e);
     };
 
     return (
