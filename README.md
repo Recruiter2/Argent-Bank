@@ -41,6 +41,9 @@ npm run populate-db
 cd front-end/
 npm run dev
 
+# Concat version
+cd front-end && npm run dev
+
 
 ```
 

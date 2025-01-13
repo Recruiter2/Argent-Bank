@@ -9,3 +9,6 @@ Currently, two official plugins are available:
 
 # Launch  front obviously navigate to folder first I mean if u reading this u already in the right folder, npm start didn't work smh
 npm run dev
+
+# Concact version
+cd front-end && npm run dev
