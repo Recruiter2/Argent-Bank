@@ -60,10 +60,44 @@ const User = () => {
 
     return (
     <main className="main bg-dark">
-      <div className="header">
-        <h1>Welcome back <br /> {userProfile.firstName} {userProfile.lastName} ! </h1>
-        <button className="edit-button">Edit Name</button>
-      </div>
+      {!editing ? (
+        <section className="header">
+          <h1>Welcome back <br /> {userProfile.firstName} {userProfile.lastName} ! </h1>
+          <button className="edit-button" onClick={edit}>Edit Name</button>
+        </section>
+      ) : (
+        <form className='profil-header' onSubmit={handleSave}>
+            <p>Edit user name</p>
+            <label htmlFor="userName">New user name</label>
+            <input
+                type="text"
+                id="userName"
+                defaultValue={userProfile.userName}
+                required
+            />
+            <label htmlFor="firstName">First name</label>
+            <input
+                type="text"
+                id="firstName"
+                defaultValue={userProfile.firstName}
+                disabled
+            />
+            <label htmlFor="lastName">Last name</label>
+            <input
+                type="text"
+                id="lastName"
+                defaultValue={userProfile.lastName}
+                disabled
+            />
+            <section className='profil-button'>
+              <button type="submit" >Save</button>
+              <button type="button" onClick={handleCancel}>Cancel</button>
+            </section>
+            
+        </form>
+      
+      )}
+      
       <h2 className="sr-only">Accounts</h2>
       <Account_n title="Argent Bank Checking (x8349)" amount = "$2,082.79" status = "Available Balance" />
       <Account_n title="Argent Bank Savings (x6712)" amount = "$10,928.42" status = "Available Balance" />
