@@ -42,11 +42,15 @@ const User = () => {
         }
     };
 
-    const handleSave = () => {
-        dispatch(editUsername(newUserName));
-        alert('Your username has been changed');
-        setInitialUserName(newUserName); 
-        toggleEdit();
+    const handleSave = async (e) => {
+        e.preventDefault();
+        const newUserName = e.target.elements.userName.value;
+        dispatch(editUserName(newUserName));
+        //alert('Your username has been changed');
+        //setInitialUserName(newUserName); 
+        //toggleEdit();
+        edit(e);
+
     };
 
     const handleCancel = () => {
