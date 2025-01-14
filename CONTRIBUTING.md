@@ -4,7 +4,7 @@ To contribute to this codebase, it's important to use the issue templates we hav
 
 ## Instructions
 
-1. Fork the [Project 10 Bank API repository](https://github.com/Recruiter2/Project-10-Bank-API)
+1. Fork the [Project 10 Bank API repository](https://github.com/Recruiter2/Argent-Bank)
 1. Once it's complete, click on the `Settings` tab in your newly forked repository
 1. Scroll down to the `Features` section and enable `Issues`
 1. Click on the newly visible `Issues` tab
