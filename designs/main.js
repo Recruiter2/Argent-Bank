@@ -1,4 +1,3 @@
-//console.log("hello");
 editing = false;
 firstName = "Tony";
 lastName = "Stark";
