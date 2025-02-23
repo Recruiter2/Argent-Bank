@@ -67,7 +67,7 @@ const User = () => {
         </section>
       ) : (
         <form className='profil-header' onSubmit={handleSave}>
-            <p>Edit user name</p>
+            <h1>Edit user name</h1>
             <label htmlFor="userName">New user name</label>
             <input
                 type="text"
