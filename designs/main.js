@@ -97,7 +97,6 @@ let form_name_update = `
 
         function handleSave() {
           userName = document.getElementById("userNameVar").value;
-          console.log(userName)
           document.getElementById("userName").innerHTML= userName
           set_editing()
           return userName
