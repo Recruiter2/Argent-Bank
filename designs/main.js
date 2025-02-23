@@ -44,7 +44,7 @@ header_simple_control();
 let form_name_update = `
 
 <form class='profil-header' >
-            <p>Edit user name</p>
+            <h1>Edit user name</h1>
             <label htmlFor="userName">New user name</label>
             <input
                 type="text"
